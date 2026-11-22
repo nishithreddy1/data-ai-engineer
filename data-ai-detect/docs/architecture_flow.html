@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pipeline Watch — Architecture Diagrams & Workflow</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      flowchart: { curve: 'basis', useMaxWidth: true, htmlLabels: true }
+    });
+  </script>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --accent: #0ea5e9;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --warning: #d97706;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 40px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px 0;
+      color: #1e293b;
+    }
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: #e0f2fe;
+      color: #0369a1;
+      margin-top: 10px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 20px 24px;
+      background: #f1f5f9;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-header h2 {
+      margin: 0 0 4px 0;
+      font-size: 1.35rem;
+      color: #1e293b;
+    }
+    .card-header p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .card-body {
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      background: #ffffff;
+      overflow-x: auto;
+    }
+    .mermaid {
+      width: 100%;
+      text-align: center;
+    }
+    .table-container {
+      padding: 20px 30px 30px 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 600;
+    }
+    tr:hover {
+      background: #f8fafc;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.88em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .callout {
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border-left: 4px solid var(--primary);
+      background: #eff6ff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>Pipeline Watch — Visual Architecture & Workflow</h1>
+    <p class="lead">Unsupervised ETL Batch Anomaly Detection with Isolation Forest for <code>raw_crs_ros_prfl</code></p>
+    <span class="badge">Orchestration: Airflow & Control-M</span>
+    <span class="badge">Engine: PySpark</span>
+  </header>
+
+  <!-- DIAGRAM 1 -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Diagram 1: End-to-End System Lifecycle</h2>
+      <p>How the one-time historical baseline training connects to the daily automated production gate.</p>
+    </div>
+    <div class="card-body">
+      <div class="mermaid">
+flowchart TD
+    subgraph SETUP ["Phase 1: Model Training (One-Time / Weekly Retrain)"]
+        H1["Landing Table: raw_crs_ros_prfl<br/>(Past 60–90 Days Partitions)"] --> H2["PySpark Collector<br/><code>spark-submit src/collect_metrics_pyspark.py --backfill</code>"]
+        H2 --> H3["data/history.csv<br/>(1 row per historical day, 9 metrics)"]
+        H3 --> H4["Train Isolation Forest<br/><code>python src/train.py data/history.csv 0.03</code>"]
+        H4 --> H5[("models/pipeline_watch.pkl<br/>(Scaler + Isolation Forest + Medians)")]
+    end
+
+    subgraph DAILY ["Phase 2: Daily Production Run (Automated via Orchestrator)"]
+        D1["Daily Source Ingestion<br/>(Data lands in raw_crs_ros_prfl)"] --> D2["PySpark Daily Collector<br/><code>spark-submit src/collect_metrics_pyspark.py</code>"]
+        D2 --> D3["data/today.csv<br/>(Single 9-metric row for today's batch)"]
+        D3 --> D4{"Quality Gate<br/><code>python src/score_daily.py data/today.csv</code>"}
+        H5 -.->|Loads Model| D4
+        
+        D4 -->|Exit Code 0: Clean| D5["Downstream Transformations<br/>(dbt / Silver & Gold Tables Proceed)"]
+        D4 -->|Exit Code 2: Anomaly| D6["Halt Pipeline & Alert Slack<br/><code>python src/alert.py --send</code>"]
+    end
+
+    style H5 fill:#e8f4fd,stroke:#2b6cb0,stroke-width:2px
+    style D4 fill:#fff3cd,stroke:#b7791f,stroke-width:2px
+    style D5 fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D6 fill:#f8d7da,stroke:#dc3545,stroke-width:2px
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAM 2 -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Diagram 2: Data-Level Metric Extraction from raw_crs_ros_prfl</h2>
+      <p>How millions of profile rows compress into the 9 operational metrics evaluated by Isolation Forest.</p>
+    </div>
+    <div class="card-body">
+      <div class="mermaid">
+flowchart LR
+    subgraph RAW ["raw_crs_ros_prfl"]
+        R1["profile_id"]
+        R2["cust_id_num"]
+        R3["load_date"]
+    end
+
+    subgraph COLLECTOR ["PySpark Aggregation Engine"]
+        direction TB
+        C1["COUNT(*) ➔ row_count"]
+        C2["AVG(IS_NULL(profile_id, cust_id_num)) ➔ null_rate"]
+        C3["1 - (COUNT(DISTINCT profile_id) / COUNT(*)) ➔ duplicate_rate"]
+        C4["COUNT(DISTINCT cust_id_num) / COUNT(*) ➔ distinct_keys_ratio"]
+        C5["Day of Week, Runtime Min, Late Minutes"]
+    end
+
+    subgraph MODEL ["Isolation Forest Evaluation"]
+        M1["data/today.csv<br/>[row_count, null_rate, duplicate_rate, ...]"]
+        M2["Isolation Forest calculates decision function:<br/>- Normal density zone ➔ Exit 0<br/>- Sparse anomaly leaf zone ➔ Exit 2"]
+    end
+
+    RAW --> COLLECTOR
+    COLLECTOR --> M1
+    M1 --> M2
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAM 3 -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Diagram 3: Airflow DAG Execution Flow</h2>
+      <p>How Airflow isolates anomalies and triggers the alert branch using <code>trigger_rule='all_failed'</code>.</p>
+    </div>
+    <div class="card-body">
+      <div class="mermaid">
+flowchart TD
+    T1["load_raw_crs_ros_prfl<br/>(BashOperator)"] --> T2["collect_metrics_pyspark<br/>(BashOperator: outputs data/today.csv)"]
+    T2 --> T3["score_batch_metrics<br/>(BashOperator: python src/score_daily.py)"]
+    
+    T3 -->|Task SUCCESS: Exit Code 0| T4["downstream_transformations<br/>(Runs ETL to Silver / Gold)"]
+    T3 -->|Task FAILED: Exit Code 2| T5["alert_on_anomaly<br/>(BashOperator: python src/alert.py --send)<br/><i>trigger_rule='all_failed'</i>"]
+
+    style T3 fill:#fff3cd,stroke:#b7791f,stroke-width:2px
+    style T4 fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style T5 fill:#f8d7da,stroke:#dc3545,stroke-width:2px
+      </div>
+    </div>
+  </div>
+
+  <!-- DIAGRAM 4 -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Diagram 4: Control-M SMART Folder Flow</h2>
+      <p>Branching logic on process Return Codes (<code>CODE = 0</code> vs <code>CODE = 2</code>).</p>
+    </div>
+    <div class="card-body">
+      <div class="mermaid">
+flowchart TD
+    J1["Job 1: LOAD_RAW_CRS_PRFL"] --> J2["Job 2: COLLECT_PYSPARK_METRICS"]
+    J2 --> J3["Job 3: SCORE_DAILY_METRICS<br/><code>python src/score_daily.py data/today.csv</code>"]
+    
+    J3 -- "ON CODE = 0<br/>DO OK<br/>DO COND: SCORE_METRICS_OK" --> J4["Job 4: DOWNSTREAM_TRANSFORMS<br/>(IN-COND: SCORE_METRICS_OK)"]
+    
+    J3 -- "ON CODE = 2<br/>DO NOTOK + DO SHOUT<br/>DO COND: SCORE_METRICS_ANOMALY" --> J5["Job 5: ALERT_SLACK_NOTIFY<br/>(IN-COND: SCORE_METRICS_ANOMALY)"]
+
+    style J3 fill:#fff3cd,stroke:#b7791f,stroke-width:2px
+    style J4 fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style J5 fill:#f8d7da,stroke:#dc3545,stroke-width:2px
+      </div>
+    </div>
+  </div>
+
+  <!-- METRIC TABLE -->
+  <div class="card">
+    <div class="card-header">
+      <h2>Metric Catalog for raw_crs_ros_prfl</h2>
+      <p>The 9 operational dimensions tracked per batch.</p>
+    </div>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Source / Expression</th>
+            <th>What It Detects</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>row_count</code></td>
+            <td><code>COUNT(*)</code></td>
+            <td>Missing ingestion files, truncated feeds, sudden duplicate drops</td>
+          </tr>
+          <tr>
+            <td><code>null_rate</code></td>
+            <td><code>AVG(IS_NULL(profile_id, cust_id_num))</code></td>
+            <td>Source schema shifts, API payload renaming, missing mandatory fields</td>
+          </tr>
+          <tr>
+            <td><code>duplicate_rate</code></td>
+            <td><code>1 - (COUNT(DISTINCT profile_id)/COUNT(*))</code></td>
+            <td>Accidental file resends, replay attacks, duplicate landing loads</td>
+          </tr>
+          <tr>
+            <td><code>distinct_keys_ratio</code></td>
+            <td><code>COUNT(DISTINCT cust_id_num)/COUNT(*)</code></td>
+            <td>Customer key collapse, spam dummy IDs, cardinality distortion</td>
+          </tr>
+          <tr>
+            <td><code>runtime_min</code></td>
+            <td>Job run duration</td>
+            <td>DB contention, Spark cluster throttling, hung batch jobs</td>
+          </tr>
+          <tr>
+            <td><code>late_minutes</code></td>
+            <td>Delay past scheduled SLA</td>
+            <td>Upstream SFTP or source data readiness lag</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
