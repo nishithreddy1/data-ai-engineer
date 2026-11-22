@@ -16,10 +16,6 @@ Six runnable ML use cases for data pipelines, verified on synthetic data:
 ### ETL Anomaly Detection — `etl-anomaly-detection/`
 Unsupervised ETL batch anomaly detection with Isolation Forest (2,000 synthetic batches, 100 planted anomalies, AUC 0.994), plus a small demo app in `demo/`.
 
-### Website — `data-ai-engineer/`
-Personal website (single-file + split `src/` build) with audit report, content checklist, and deploy guide in `docs/`.
-
 ## Notes
 
-- All ML experiments use synthetic data; scores are a starting point, not production proof.
-- Each folder has its own README with run instructions.
+- All ML experiments use synthetic data; scores are a starting point
