@@ -41,9 +41,3 @@ contamination is a guess until tuned on real history; single-batch
 features only (no cross-day sequence model yet — LSTM autoencoder is the
 phase-2 upgrade if sequences matter).
 
-## Recommendation
-
-Ship this as ** first ML module** ("Pipeline Watch"): nightly
-score yesterday's loads, queue the worst 5% for human review, log
-decisions to build a labelled set — which later unlocks supervised
-bad-record classification (rank 2). ~1 week to adapt to real job logs.
