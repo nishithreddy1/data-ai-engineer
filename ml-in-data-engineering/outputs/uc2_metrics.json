@@ -1,0 +1,25 @@
+{
+  "use_case": "2_bad_record_classification",
+  "rows": 6000,
+  "bad_records": 720,
+  "models": [
+    {
+      "model": "LogisticRegression",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0
+    },
+    {
+      "model": "RandomForest",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0
+    }
+  ],
+  "best_by_f1": "LogisticRegression",
+  "note": "Quality score = P(good) = 1 - P(bad); route low scores to review, never auto-delete."
+}

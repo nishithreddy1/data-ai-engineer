@@ -1,0 +1,21 @@
+{
+  "use_case": "4_schema_drift_semantic_typing",
+  "inferred_types": {
+    "customer_id": "free_text",
+    "email": "email",
+    "amount": "decimal",
+    "country": "categorical",
+    "txn_date": "date_iso"
+  },
+  "added_columns": [
+    "new_risk_flag"
+  ],
+  "removed_columns": [],
+  "numeric_drift_psi": {
+    "amount": {
+      "psi": 2.665,
+      "verdict": "major drift"
+    }
+  },
+  "note": "PSI >0.25 = investigate before loading; new columns need contract review."
+}

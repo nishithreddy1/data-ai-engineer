@@ -1,0 +1,14 @@
+{
+  "use_case": "6_llm_repair_guarded_demo",
+  "records": 800,
+  "records_with_proposed_repairs": 735,
+  "flagged_for_human_review": 625,
+  "auto_applied": 0,
+  "guardrails": [
+    "propose-only, human approves",
+    "original values preserved",
+    "every repair logged",
+    "no LLM call in this demo"
+  ],
+  "note": "Replace propose_repairs() internals with an LLM later \u2014 keep the gate."
+}

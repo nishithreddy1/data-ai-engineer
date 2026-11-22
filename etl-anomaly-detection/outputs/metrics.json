@@ -1,0 +1,20 @@
+{
+  "rows": 2000,
+  "planted_anomalies": 100,
+  "flagged": 100,
+  "precision": 0.82,
+  "recall": 0.82,
+  "roc_auc": 0.994,
+  "pr_auc": 0.935,
+  "confusion_matrix": [
+    [
+      1882,
+      18
+    ],
+    [
+      18,
+      82
+    ]
+  ],
+  "contamination": 0.05
+}

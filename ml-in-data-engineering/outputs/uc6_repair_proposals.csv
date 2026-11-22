@@ -1,0 +1,201 @@
+email,amount_text,date_text,country,email_fixed,amount_fixed,date_fixed,country_fixed,needs_review
+User0@EXAMPLE.com ,"₹1,931.42",18/01/2026,INDIA,user0@example.com,1931.42,2026-01-18,IN,True
+user1@example.com,1528.0,2026-01-18,india,user1@example.com,1528.0,2026-01-18,IN,True
+user2@example.com,2065.14,2026-01-06,INDIA,user2@example.com,2065.14,2026-06-01,IN,True
+user3@example.com,2122.17,16/01/2026,In,user3@example.com,2122.17,2026-01-16,IN,True
+user4@example.com,"₹1,254.69",2026-01-15,INDIA,user4@example.com,1254.69,2026-01-15,IN,True
+User5@EXAMPLE.com ,1449.35,2026-01-12,india,user5@example.com,1449.35,2026-12-01,IN,True
+user6@example.com,1878.35,22/01/2026,INDIA,user6@example.com,1878.35,2026-01-22,IN,True
+user7@example.com,1745.13,2026-01-19,In,user7@example.com,1745.13,2026-01-19,IN,True
+user8@example.com,"₹1,834.96",2026-01-15,india,user8@example.com,1834.96,2026-01-15,IN,True
+user9@example.com,1584.09,21/01/2026,india,user9@example.com,1584.09,2026-01-21,IN,True
+User10@EXAMPLE.com ,2103.82,2026-01-22,IN,user10@example.com,2103.82,2026-01-22,IN,True
+user11@example.com,2073.34,2026-01-16,india,user11@example.com,2073.34,2026-01-16,IN,True
+user12@example.com,"₹1,859.81",08/01/2026,INDIA,user12@example.com,1859.81,2026-01-08,IN,True
+user13@example.com,2178.17,2026-01-22,india,user13@example.com,2178.17,2026-01-22,IN,True
+user14@example.com,1980.25,2026-01-21,india,user14@example.com,1980.25,2026-01-21,IN,True
+User15@EXAMPLE.com ,1582.21,28/01/2026,INDIA,user15@example.com,1582.21,2026-01-28,IN,True
+user16@example.com,"₹1,950.63",2026-01-05,In,user16@example.com,1950.63,2026-05-01,IN,True
+user17@example.com,1552.34,2026-01-12,india,user17@example.com,1552.34,2026-12-01,IN,True
+user18@example.com,2103.54,26/01/2026,india,user18@example.com,2103.54,2026-01-26,IN,True
+user19@example.com,1825.02,2026-01-15,india,user19@example.com,1825.02,2026-01-15,IN,True
+User20@EXAMPLE.com ,"₹1,784.54",2026-01-27,In,user20@example.com,1784.54,2026-01-27,IN,True
+user21@example.com,1635.72,01/01/2026,IN,user21@example.com,1635.72,2026-01-01,IN,False
+user22@example.com,2206.76,2026-01-01,india,user22@example.com,2206.76,2026-01-01,IN,True
+user23@example.com,1793.64,2026-01-23,INDIA,user23@example.com,1793.64,2026-01-23,IN,True
+user24@example.com,"₹1,711.50",11/01/2026,INDIA,user24@example.com,1711.5,2026-01-11,IN,True
+User25@EXAMPLE.com ,1734.36,2026-01-15,INDIA,user25@example.com,1734.36,2026-01-15,IN,True
+user26@example.com,1999.69,2026-01-12,india,user26@example.com,1999.69,2026-12-01,IN,True
+user27@example.com,1949.63,12/01/2026,india,user27@example.com,1949.63,2026-01-12,IN,True
+user28@example.com,"₹1,963.82",2026-01-27,In,user28@example.com,1963.82,2026-01-27,IN,True
+user29@example.com,1969.25,2026-01-03,INDIA,user29@example.com,1969.25,2026-03-01,IN,True
+User30@EXAMPLE.com ,2482.49,22/01/2026,INDIA,user30@example.com,2482.49,2026-01-22,IN,True
+user31@example.com,1718.08,2026-01-25,INDIA,user31@example.com,1718.08,2026-01-25,IN,True
+user32@example.com,"₹1,686.33",2026-01-19,IN,user32@example.com,1686.33,2026-01-19,IN,False
+user33@example.com,1595.87,12/01/2026,In,user33@example.com,1595.87,2026-01-12,IN,True
+user34@example.com,2024.79,2026-01-05,INDIA,user34@example.com,2024.79,2026-05-01,IN,True
+User35@EXAMPLE.com ,2178.69,2026-01-20,india,user35@example.com,2178.69,2026-01-20,IN,True
+user36@example.com,"₹1,805.82",14/01/2026,IN,user36@example.com,1805.82,2026-01-14,IN,False
+user37@example.com,1587.95,2026-01-05,IN,user37@example.com,1587.95,2026-05-01,IN,False
+user38@example.com,1592.66,2026-01-11,india,user38@example.com,1592.66,2026-11-01,IN,True
+user39@example.com,2035.18,27/01/2026,IN,user39@example.com,2035.18,2026-01-27,IN,False
+User40@EXAMPLE.com ,"₹2,062.98",2026-01-08,In,user40@example.com,2062.98,2026-08-01,IN,True
+user41@example.com,2002.95,2026-01-05,india,user41@example.com,2002.95,2026-05-01,IN,True
+user42@example.com,1640.35,20/01/2026,IN,user42@example.com,1640.35,2026-01-20,IN,False
+user43@example.com,1909.65,2026-01-06,india,user43@example.com,1909.65,2026-06-01,IN,True
+user44@example.com,"₹1,875.01",2026-01-26,india,user44@example.com,1875.01,2026-01-26,IN,True
+User45@EXAMPLE.com ,1905.61,25/01/2026,india,user45@example.com,1905.61,2026-01-25,IN,True
+user46@example.com,2101.43,2026-01-28,INDIA,user46@example.com,2101.43,2026-01-28,IN,True
+user47@example.com,1907.08,2026-01-26,In,user47@example.com,1907.08,2026-01-26,IN,True
+user48@example.com,"₹2,043.67",07/01/2026,INDIA,user48@example.com,2043.67,2026-01-07,IN,True
+user49@example.com,1860.27,2026-01-06,india,user49@example.com,1860.27,2026-06-01,IN,True
+User50@EXAMPLE.com ,1926.74,2026-01-10,india,user50@example.com,1926.74,2026-10-01,IN,True
+user51@example.com,2029.39,14/01/2026,IN,user51@example.com,2029.39,2026-01-14,IN,False
+user52@example.com,"₹1,402.85",2026-01-25,IN,user52@example.com,1402.85,2026-01-25,IN,False
+user53@example.com,1744.1,2026-01-21,IN,user53@example.com,1744.1,2026-01-21,IN,False
+user54@example.com,1698.89,19/01/2026,india,user54@example.com,1698.89,2026-01-19,IN,True
+User55@EXAMPLE.com ,1648.34,2026-01-25,IN,user55@example.com,1648.34,2026-01-25,IN,True
+user56@example.com,"₹1,757.46",2026-01-19,In,user56@example.com,1757.46,2026-01-19,IN,True
+user57@example.com,2288.48,11/01/2026,In,user57@example.com,2288.48,2026-01-11,IN,True
+user58@example.com,1580.25,2026-01-12,india,user58@example.com,1580.25,2026-12-01,IN,True
+user59@example.com,2130.48,2026-01-15,IN,user59@example.com,2130.48,2026-01-15,IN,False
+User60@EXAMPLE.com ,"₹1,335.14",03/01/2026,INDIA,user60@example.com,1335.14,2026-01-03,IN,True
+user61@example.com,1739.53,2026-01-21,india,user61@example.com,1739.53,2026-01-21,IN,True
+user62@example.com,1888.83,2026-01-19,india,user62@example.com,1888.83,2026-01-19,IN,True
+user63@example.com,2015.87,21/01/2026,INDIA,user63@example.com,2015.87,2026-01-21,IN,True
+user64@example.com,"₹2,053.37",2026-01-15,india,user64@example.com,2053.37,2026-01-15,IN,True
+User65@EXAMPLE.com ,2078.0,2026-01-22,INDIA,user65@example.com,2078.0,2026-01-22,IN,True
+user66@example.com,1735.38,27/01/2026,INDIA,user66@example.com,1735.38,2026-01-27,IN,True
+user67@example.com,1701.29,2026-01-16,IN,user67@example.com,1701.29,2026-01-16,IN,False
+user68@example.com,"₹2,097.39",2026-01-13,india,user68@example.com,2097.39,2026-01-13,IN,True
+user69@example.com,1782.61,03/01/2026,In,user69@example.com,1782.61,2026-01-03,IN,True
+User70@EXAMPLE.com ,1457.29,2026-01-22,IN,user70@example.com,1457.29,2026-01-22,IN,True
+user71@example.com,1500.01,2026-01-26,IN,user71@example.com,1500.01,2026-01-26,IN,False
+user72@example.com,"₹1,564.16",20/01/2026,IN,user72@example.com,1564.16,2026-01-20,IN,False
+user73@example.com,1989.15,2026-01-25,india,user73@example.com,1989.15,2026-01-25,IN,True
+user74@example.com,1882.73,2026-01-25,IN,user74@example.com,1882.73,2026-01-25,IN,False
+User75@EXAMPLE.com ,2047.15,23/01/2026,IN,user75@example.com,2047.15,2026-01-23,IN,True
+user76@example.com,"₹1,711.82",2026-01-15,INDIA,user76@example.com,1711.82,2026-01-15,IN,True
+user77@example.com,1887.56,2026-01-03,INDIA,user77@example.com,1887.56,2026-03-01,IN,True
+user78@example.com,2027.68,01/01/2026,In,user78@example.com,2027.68,2026-01-01,IN,True
+user79@example.com,1747.2,2026-01-06,INDIA,user79@example.com,1747.2,2026-06-01,IN,True
+User80@EXAMPLE.com ,"₹1,977.03",2026-01-13,INDIA,user80@example.com,1977.03,2026-01-13,IN,True
+user81@example.com,1641.42,21/01/2026,IN,user81@example.com,1641.42,2026-01-21,IN,False
+user82@example.com,1731.08,2026-01-13,IN,user82@example.com,1731.08,2026-01-13,IN,False
+user83@example.com,1725.48,2026-01-01,INDIA,user83@example.com,1725.48,2026-01-01,IN,True
+user84@example.com,"₹1,481.25",06/01/2026,IN,user84@example.com,1481.25,2026-01-06,IN,False
+User85@EXAMPLE.com ,1986.09,2026-01-28,INDIA,user85@example.com,1986.09,2026-01-28,IN,True
+user86@example.com,1699.18,2026-01-28,IN,user86@example.com,1699.18,2026-01-28,IN,False
+user87@example.com,1843.75,11/01/2026,In,user87@example.com,1843.75,2026-01-11,IN,True
+user88@example.com,"₹1,984.22",2026-01-23,INDIA,user88@example.com,1984.22,2026-01-23,IN,True
+user89@example.com,1973.96,2026-01-21,india,user89@example.com,1973.96,2026-01-21,IN,True
+User90@EXAMPLE.com ,2039.62,27/01/2026,In,user90@example.com,2039.62,2026-01-27,IN,True
+user91@example.com,1810.45,2026-01-25,INDIA,user91@example.com,1810.45,2026-01-25,IN,True
+user92@example.com,"₹1,713.01",2026-01-18,india,user92@example.com,1713.01,2026-01-18,IN,True
+user93@example.com,1816.08,12/01/2026,india,user93@example.com,1816.08,2026-01-12,IN,True
+user94@example.com,1333.8,2026-01-18,IN,user94@example.com,1333.8,2026-01-18,IN,False
+User95@EXAMPLE.com ,1405.87,2026-01-09,india,user95@example.com,1405.87,2026-09-01,IN,True
+user96@example.com,"₹1,443.19",10/01/2026,IN,user96@example.com,1443.19,2026-01-10,IN,False
+user97@example.com,1540.83,2026-01-18,IN,user97@example.com,1540.83,2026-01-18,IN,False
+user98@example.com,1959.93,2026-01-16,india,user98@example.com,1959.93,2026-01-16,IN,True
+user99@example.com,1568.36,17/01/2026,In,user99@example.com,1568.36,2026-01-17,IN,True
+User100@EXAMPLE.com ,"₹1,726.55",2026-01-11,In,user100@example.com,1726.55,2026-11-01,IN,True
+user101@example.com,2229.77,2026-01-12,INDIA,user101@example.com,2229.77,2026-12-01,IN,True
+user102@example.com,1733.12,01/01/2026,In,user102@example.com,1733.12,2026-01-01,IN,True
+user103@example.com,2061.25,2026-01-17,INDIA,user103@example.com,2061.25,2026-01-17,IN,True
+user104@example.com,"₹1,559.91",2026-01-17,INDIA,user104@example.com,1559.91,2026-01-17,IN,True
+User105@EXAMPLE.com ,1778.37,27/01/2026,INDIA,user105@example.com,1778.37,2026-01-27,IN,True
+user106@example.com,1554.99,2026-01-15,IN,user106@example.com,1554.99,2026-01-15,IN,False
+user107@example.com,1738.29,2026-01-14,In,user107@example.com,1738.29,2026-01-14,IN,True
+user108@example.com,"₹2,092.09",02/01/2026,INDIA,user108@example.com,2092.09,2026-01-02,IN,True
+user109@example.com,1321.8,2026-01-06,IN,user109@example.com,1321.8,2026-06-01,IN,False
+User110@EXAMPLE.com ,1970.33,2026-01-10,IN,user110@example.com,1970.33,2026-10-01,IN,True
+user111@example.com,1911.32,11/01/2026,IN,user111@example.com,1911.32,2026-01-11,IN,False
+user112@example.com,"₹1,661.76",2026-01-11,In,user112@example.com,1661.76,2026-11-01,IN,True
+user113@example.com,1406.18,2026-01-12,INDIA,user113@example.com,1406.18,2026-12-01,IN,True
+user114@example.com,1861.64,22/01/2026,IN,user114@example.com,1861.64,2026-01-22,IN,False
+User115@EXAMPLE.com ,1681.15,2026-01-04,INDIA,user115@example.com,1681.15,2026-04-01,IN,True
+user116@example.com,"₹1,909.80",2026-01-10,INDIA,user116@example.com,1909.8,2026-10-01,IN,True
+user117@example.com,1846.56,05/01/2026,INDIA,user117@example.com,1846.56,2026-01-05,IN,True
+user118@example.com,2320.53,2026-01-09,IN,user118@example.com,2320.53,2026-09-01,IN,False
+user119@example.com,1768.19,2026-01-20,In,user119@example.com,1768.19,2026-01-20,IN,True
+User120@EXAMPLE.com ,"₹1,532.95",02/01/2026,INDIA,user120@example.com,1532.95,2026-01-02,IN,True
+user121@example.com,1893.78,2026-01-10,INDIA,user121@example.com,1893.78,2026-10-01,IN,True
+user122@example.com,1906.0,2026-01-01,INDIA,user122@example.com,1906.0,2026-01-01,IN,True
+user123@example.com,2247.76,27/01/2026,In,user123@example.com,2247.76,2026-01-27,IN,True
+user124@example.com,"₹2,090.53",2026-01-21,INDIA,user124@example.com,2090.53,2026-01-21,IN,True
+User125@EXAMPLE.com ,1947.06,2026-01-07,In,user125@example.com,1947.06,2026-07-01,IN,True
+user126@example.com,2278.99,06/01/2026,INDIA,user126@example.com,2278.99,2026-01-06,IN,True
+user127@example.com,1483.37,2026-01-03,INDIA,user127@example.com,1483.37,2026-03-01,IN,True
+user128@example.com,"₹1,648.07",2026-01-14,IN,user128@example.com,1648.07,2026-01-14,IN,False
+user129@example.com,1562.03,22/01/2026,INDIA,user129@example.com,1562.03,2026-01-22,IN,True
+User130@EXAMPLE.com ,1723.06,2026-01-17,india,user130@example.com,1723.06,2026-01-17,IN,True
+user131@example.com,1426.99,2026-01-25,INDIA,user131@example.com,1426.99,2026-01-25,IN,True
+user132@example.com,"₹2,030.55",10/01/2026,In,user132@example.com,2030.55,2026-01-10,IN,True
+user133@example.com,1773.33,2026-01-08,india,user133@example.com,1773.33,2026-08-01,IN,True
+user134@example.com,1398.76,2026-01-14,INDIA,user134@example.com,1398.76,2026-01-14,IN,True
+User135@EXAMPLE.com ,1535.33,06/01/2026,india,user135@example.com,1535.33,2026-01-06,IN,True
+user136@example.com,"₹1,934.05",2026-01-28,In,user136@example.com,1934.05,2026-01-28,IN,True
+user137@example.com,2091.44,2026-01-06,In,user137@example.com,2091.44,2026-06-01,IN,True
+user138@example.com,2439.02,14/01/2026,IN,user138@example.com,2439.02,2026-01-14,IN,False
+user139@example.com,2714.16,2026-01-15,INDIA,user139@example.com,2714.16,2026-01-15,IN,True
+User140@EXAMPLE.com ,"₹1,964.32",2026-01-02,IN,user140@example.com,1964.32,2026-02-01,IN,True
+user141@example.com,1543.14,14/01/2026,india,user141@example.com,1543.14,2026-01-14,IN,True
+user142@example.com,1200.39,2026-01-13,IN,user142@example.com,1200.39,2026-01-13,IN,False
+user143@example.com,1920.31,2026-01-08,In,user143@example.com,1920.31,2026-08-01,IN,True
+user144@example.com,"₹1,596.12",04/01/2026,IN,user144@example.com,1596.12,2026-01-04,IN,False
+User145@EXAMPLE.com ,1715.39,2026-01-02,IN,user145@example.com,1715.39,2026-02-01,IN,True
+user146@example.com,1656.37,2026-01-01,In,user146@example.com,1656.37,2026-01-01,IN,True
+user147@example.com,1797.76,14/01/2026,INDIA,user147@example.com,1797.76,2026-01-14,IN,True
+user148@example.com,"₹2,159.79",2026-01-03,In,user148@example.com,2159.79,2026-03-01,IN,True
+user149@example.com,1887.11,2026-01-27,IN,user149@example.com,1887.11,2026-01-27,IN,False
+User150@EXAMPLE.com ,1792.41,07/01/2026,IN,user150@example.com,1792.41,2026-01-07,IN,True
+user151@example.com,1529.3,2026-01-19,IN,user151@example.com,1529.3,2026-01-19,IN,False
+user152@example.com,"₹1,337.60",2026-01-19,india,user152@example.com,1337.6,2026-01-19,IN,True
+user153@example.com,1694.11,14/01/2026,In,user153@example.com,1694.11,2026-01-14,IN,True
+user154@example.com,1823.87,2026-01-25,india,user154@example.com,1823.87,2026-01-25,IN,True
+User155@EXAMPLE.com ,2370.38,2026-01-04,In,user155@example.com,2370.38,2026-04-01,IN,True
+user156@example.com,"₹1,879.08",07/01/2026,IN,user156@example.com,1879.08,2026-01-07,IN,False
+user157@example.com,2134.82,2026-01-08,india,user157@example.com,2134.82,2026-08-01,IN,True
+user158@example.com,1690.21,2026-01-04,In,user158@example.com,1690.21,2026-04-01,IN,True
+user159@example.com,1484.52,09/01/2026,IN,user159@example.com,1484.52,2026-01-09,IN,False
+User160@EXAMPLE.com ,"₹1,550.46",2026-01-09,IN,user160@example.com,1550.46,2026-09-01,IN,True
+user161@example.com,1622.43,2026-01-22,INDIA,user161@example.com,1622.43,2026-01-22,IN,True
+user162@example.com,2478.54,09/01/2026,india,user162@example.com,2478.54,2026-01-09,IN,True
+user163@example.com,1593.58,2026-01-25,IN,user163@example.com,1593.58,2026-01-25,IN,False
+user164@example.com,"₹2,091.55",2026-01-22,IN,user164@example.com,2091.55,2026-01-22,IN,False
+User165@EXAMPLE.com ,1569.12,26/01/2026,In,user165@example.com,1569.12,2026-01-26,IN,True
+user166@example.com,2119.47,2026-01-03,IN,user166@example.com,2119.47,2026-03-01,IN,False
+user167@example.com,1955.49,2026-01-28,india,user167@example.com,1955.49,2026-01-28,IN,True
+user168@example.com,"₹1,793.01",18/01/2026,In,user168@example.com,1793.01,2026-01-18,IN,True
+user169@example.com,1827.77,2026-01-28,india,user169@example.com,1827.77,2026-01-28,IN,True
+User170@EXAMPLE.com ,1643.56,2026-01-10,IN,user170@example.com,1643.56,2026-10-01,IN,True
+user171@example.com,1973.82,27/01/2026,In,user171@example.com,1973.82,2026-01-27,IN,True
+user172@example.com,"₹1,703.50",2026-01-17,IN,user172@example.com,1703.5,2026-01-17,IN,False
+user173@example.com,1472.32,2026-01-03,In,user173@example.com,1472.32,2026-03-01,IN,True
+user174@example.com,1456.62,12/01/2026,india,user174@example.com,1456.62,2026-01-12,IN,True
+User175@EXAMPLE.com ,1891.78,2026-01-04,india,user175@example.com,1891.78,2026-04-01,IN,True
+user176@example.com,"₹2,313.73",2026-01-27,INDIA,user176@example.com,2313.73,2026-01-27,IN,True
+user177@example.com,1888.0,09/01/2026,In,user177@example.com,1888.0,2026-01-09,IN,True
+user178@example.com,1804.41,2026-01-07,india,user178@example.com,1804.41,2026-07-01,IN,True
+user179@example.com,1925.75,2026-01-16,IN,user179@example.com,1925.75,2026-01-16,IN,False
+User180@EXAMPLE.com ,"₹2,231.80",12/01/2026,india,user180@example.com,2231.8,2026-01-12,IN,True
+user181@example.com,1905.81,2026-01-03,INDIA,user181@example.com,1905.81,2026-03-01,IN,True
+user182@example.com,1716.72,2026-01-23,india,user182@example.com,1716.72,2026-01-23,IN,True
+user183@example.com,2171.89,24/01/2026,INDIA,user183@example.com,2171.89,2026-01-24,IN,True
+user184@example.com,"₹1,968.63",2026-01-21,INDIA,user184@example.com,1968.63,2026-01-21,IN,True
+User185@EXAMPLE.com ,2300.73,2026-01-18,india,user185@example.com,2300.73,2026-01-18,IN,True
+user186@example.com,1894.97,12/01/2026,In,user186@example.com,1894.97,2026-01-12,IN,True
+user187@example.com,1472.66,2026-01-16,IN,user187@example.com,1472.66,2026-01-16,IN,False
+user188@example.com,"₹1,429.55",2026-01-15,IN,user188@example.com,1429.55,2026-01-15,IN,False
+user189@example.com,2335.28,05/01/2026,INDIA,user189@example.com,2335.28,2026-01-05,IN,True
+User190@EXAMPLE.com ,2357.1,2026-01-03,IN,user190@example.com,2357.1,2026-03-01,IN,True
+user191@example.com,1786.14,2026-01-08,IN,user191@example.com,1786.14,2026-08-01,IN,False
+user192@example.com,"₹1,725.04",13/01/2026,IN,user192@example.com,1725.04,2026-01-13,IN,False
+user193@example.com,2278.43,2026-01-05,INDIA,user193@example.com,2278.43,2026-05-01,IN,True
+user194@example.com,1507.89,2026-01-03,IN,user194@example.com,1507.89,2026-03-01,IN,False
+User195@EXAMPLE.com ,1571.58,24/01/2026,In,user195@example.com,1571.58,2026-01-24,IN,True
+user196@example.com,"₹2,033.00",2026-01-11,india,user196@example.com,2033.0,2026-11-01,IN,True
+user197@example.com,1721.62,2026-01-17,INDIA,user197@example.com,1721.62,2026-01-17,IN,True
+user198@example.com,1838.46,15/01/2026,In,user198@example.com,1838.46,2026-01-15,IN,True
+user199@example.com,1790.97,2026-01-21,india,user199@example.com,1790.97,2026-01-21,IN,True

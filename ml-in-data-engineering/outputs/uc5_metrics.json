@@ -1,0 +1,10 @@
+{
+  "use_case": "5_sequence_anomaly_autoencoder",
+  "days": 365,
+  "window_days": 14,
+  "threshold_q97_normal": 0.1294,
+  "precision": 0.265,
+  "recall": 0.957,
+  "roc_auc": 0.932,
+  "note": "Catches slow drift + collapses; explanations weaker than UC1 \u2014 pair both."
+}

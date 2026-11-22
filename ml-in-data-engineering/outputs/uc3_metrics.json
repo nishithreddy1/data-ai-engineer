@@ -1,0 +1,27 @@
+{
+  "use_case": "3_sla_failure_prediction",
+  "runs": 4000,
+  "breach_rate": 0.184,
+  "precision": 0.432,
+  "recall": 0.087,
+  "roc_auc": 0.669,
+  "top_risk_drivers": [
+    {
+      "feature": "prev_failures_7d",
+      "importance": 0.333
+    },
+    {
+      "feature": "avg_runtime_min",
+      "importance": 0.127
+    },
+    {
+      "feature": "runtime_trend",
+      "importance": 0.124
+    },
+    {
+      "feature": "concurrent_jobs",
+      "importance": 0.123
+    }
+  ],
+  "note": "Alert on P(breach) > threshold; tune threshold to on-call budget."
+}
