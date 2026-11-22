@@ -1,5 +1,5 @@
 
-|---|---|---|---|---|
+
 | **1** | **ETL batch anomaly detection** (volume/null/dup/runtime drift) | Isolation Forest | No | **Best** — uses metrics you already have; scikit-learn basics; demo in days |
 | 2 | Data-quality scoring / bad-record classification | Gradient boosting / logistic regression | Yes (past incidents) | Strong, but needs labelled history you may not have |
 | 3 | Pipeline failure / SLA prediction | Random forest / XGBoost | Yes (run history) | Good phase 2 once run logs are collected |
